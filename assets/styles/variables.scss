@@ -1,0 +1,73 @@
+// colors
+$baseTextBlueBlack: #2C3E51;
+$baseGreyblack: #353846;
+$baseGreen: #4DCDC3;
+$baseWhite: #FFFFFF;
+$baseRed: #FF6B6A;
+$baseYellow: #FEE66C;
+$footerBackgroundGrey: #F2F5F8;
+$footerTextGrey: #939393;
+$footerLineGrey: #CDCED2;
+$contentDividerLine: #EEEEEE;
+$logoblue: #00AAF4;
+$slate: #44C9F5;
+$dynamo: #A4CD3A;
+$presquevu: #FD8500;
+$chelada: #4356A5;
+$eatlas: #4F87DB;
+$vidyoconnect: #89C040;
+$slantBackground: rgba(0, 188, 212, 0.4);
+
+//light theme
+$colors: (
+  baseBackground:#f4f8ff,
+  baseText: #191a1a,
+  baseBackgroundHighlight: #FFF,
+  baseBackgroundSubdude: #e9eef3,
+  baseBackgrounddarker: #cdd9e4,
+  h3Textcolor: #191a1a,
+  h4Textcolor: $logoblue,
+  subdued: #707474,
+  g1: #dfe9f3,
+  g2: #FFF,
+);
+//dark theme
+$colors-dark: (
+  baseBackground: #29323c,
+  baseText: #FAFAFA,
+  baseBackgroundHighlight: #29323c,
+  baseBackgroundSubdude: hsl(211, 30%, 15%),
+  baseBackgrounddarker: hsl(211, 30%, 15%),
+  h3Textcolor: #FAFAFA,
+  h4Textcolor: $slate,
+  subdued: #BBBFC4,
+  g1: #29323c,
+  g2: #485563,
+);
+//converting scss variable into css variable
+:root {
+  @each $name, $color in $colors{
+      --color-#{$name} : #{$color};
+  };
+  --theme: 'light';
+}
+
+@media(prefers-color-scheme: dark) {
+  :root {
+    @each $name, $color in $colors-dark{
+      --color-#{$name} : #{$color};
+    };
+    --theme : 'dark';
+  }
+}
+
+//creating a function to get color instead of using css varible
+@function getColor($color-name){
+    @return var(--color-#{$color-name});
+}
+
+@function getimage($img-name){
+  @return var(--color-#{$img-name});
+}
+
+
