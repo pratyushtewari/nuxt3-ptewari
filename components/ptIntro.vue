@@ -14,7 +14,7 @@ export default {
   name: 'PtIntro',
   methods: {
     handleScroll: function() {
-      let introSection = $('#pt-intro-background');
+      let introSection = document.querySelector('#pt-intro-background');
       let introSectionHeight = introSection.height();
       //change scaleSpeed if you want to change the speed of the scale effect
       let scaleSpeed = 0.2;
@@ -23,39 +23,46 @@ export default {
       let scrollPercentage = (window.scrollY / introSectionHeight).toFixed(5);
       let scaleValue = 1 - scrollPercentage * scaleSpeed * 1.05;
 
-      $(this.$refs.mainImage).css({
-        transform:
-          'scale(' +
-          scaleValue +
-          ') translateY(' +
-          scrollPercentage * 400 +
-          'px)',
-        '-moz-transform':
-          'scale(' +
-          scaleValue +
-          ') translateY(' +
-          scrollPercentage * 400 +
-          'px)',
-        '-webkit-transform':
-          'scale(' +
-          scaleValue +
-          ') translateY(' +
-          scrollPercentage * 400 +
-          'px)',
-        '-ms-transform':
-          'scale(' +
-          scaleValue +
-          ') translateY(' +
-          scrollPercentage * 400 +
-          'px)',
-        '-o-transform':
-          'scale(' +
-          scaleValue +
-          ') translateY(' +
-          scrollPercentage * 400 +
-          'px)',
-        opacity: 1 - scrollPercentage / 2
-      });
+      this.$refs.mainImage.style.transform = `
+      scale(${scaleValue})
+      translateY(${scrollPercentage * 400}px)
+
+      `;
+      this.$refs.mainImage.style.opacity = 1 - scrollPercentage / 2;
+
+      // $(this.$refs.mainImage).css({
+      //   transform:
+      //     'scale(' +
+      //     scaleValue +
+      //     ') translateY(' +
+      //     scrollPercentage * 400 +
+      //     'px)',
+      //   '-moz-transform':
+      //     'scale(' +
+      //     scaleValue +
+      //     ') translateY(' +
+      //     scrollPercentage * 400 +
+      //     'px)',
+      //   '-webkit-transform':
+      //     'scale(' +
+      //     scaleValue +
+      //     ') translateY(' +
+      //     scrollPercentage * 400 +
+      //     'px)',
+      //   '-ms-transform':
+      //     'scale(' +
+      //     scaleValue +
+      //     ') translateY(' +
+      //     scrollPercentage * 400 +
+      //     'px)',
+      //   '-o-transform':
+      //     'scale(' +
+      //     scaleValue +
+      //     ') translateY(' +
+      //     scrollPercentage * 400 +
+      //     'px)',
+      //   opacity: 1 - scrollPercentage / 2
+      // });
     }
   }
 };

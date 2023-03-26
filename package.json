@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "@aacassandra/vue3-progressbar": "^1.0.3",
-    "jquery": "^3.6.4",
     "prettier": "^2.8.7",
     "sass": "^1.60.0",
     "sass-loader": "^13.2.1",

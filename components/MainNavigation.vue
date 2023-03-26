@@ -32,10 +32,10 @@ export default {
   },
   methods: {
     toggleNavMenu: function (event) {
-      $(this.$refs.links).toggleClass('is-visible');
+      this.$refs.links.classList.toggle('is-visible');
     },
     closeNavMenu: function (event) {
-      $(this.$refs.links).removeClass('is-visible');
+      this.$refs.links.classList.remove('is-visible');
     }
   }
 };
