@@ -33,13 +33,16 @@ export default {
   name: 'DropdownMenu',
   methods: {
     togglemenu: function (event) {
-      $(this.$refs.menu).removeClass('visible');
+      console.warn("togglemenu");
+      this.$refs.menu.classList.remove('visible');
     },
     mouseover: function (event) {
-      $(this.$refs.menu).addClass('visible');
+      console.warn("mouseover");
+      this.$refs.menu.classList.add('visible');
     },
     mouseleave: function (event) {
-      $(this.$refs.menu).removeClass('visible');
+      console.warn("mouseleave");
+      this.$refs.menu.classList.remove('visible');
     }
   }
 };

@@ -9,7 +9,7 @@ export default {
   name: 'BackToTop',
   methods: {
     backtotop() {
-      $('html, body').animate({ scrollTop: 0 }, 'slow');
+      document.body.scrollIntoView({ behavior: 'smooth' });
     },
     handleScroll() {
       if (window.scrollY > 400) {
