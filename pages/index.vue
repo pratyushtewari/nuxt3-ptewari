@@ -22,6 +22,7 @@
         </c>
       </grid>
       <h3>About</h3>
+
       <grid class="middle" col="1">
         <c>
           <br />
@@ -106,332 +107,102 @@
         </c>
       </grid>
       <h3>Work Experience</h3>
-      <br />
-      <grid
-        class="middle"
-        col="2"
-        gap="40px"
-        style="grid-template-columns: 100px auto; padding-bottom: 20px"
-      >
-        <c class="subdued" style="padding-top: 4px">2021 — Now</c>
-        <c>
-          <p style="font-size: 18px; font-weight: 600">
-            Led the design strategy to converge six disparate products into a
-            single platform
-          </p>
-          <p style="font-size: 16px">Lead Platform Design Manager at VTS</p>
 
-          <p class="subdued" style="font-size: 12px; padding-bottom: 4px">
-            New York
-          </p>
+      <WorkExperience
+        year="2021 - Now"
+        title="Led the design strategy to converge six disparate products into a single platform"
+        position="Lead Platform Design Manager"
+        company="VTS"
+        location="New York"
+        :details="[
+          'Created a vision for a single platform to serve multiple personas and functions for the commercial real estate industry.',
+          'Partnered with ﬁve product heads to champion a cross-product vision to transition disparate applications over to a uniﬁed platform',
+          'Enabled VTS customers to have a uniﬁed seamless experience and achieve company’s long term strategic objectives by aligned the respective design squads to a single platform',
+          'Managed the platform UX team and led the creation of a new enterprise design system',
+          'Leveled up the design operation efﬁciency and UX maturity and reduced component redundancy by 6x',
+          'Mentored and educated other designers on interaction patterns, design system foundations, accessibility design and design principles',
+          'Enabled cross-pollination of ideas among 20+ designers across different squads to collaborate and contribute to a single repository of design patterns and components.',
+          'Implemented a governance model to ensure quality and shared ownership',
+          'Standardized the design language for the company, implemented scalable and efﬁcient design processes, removed the need to spec designs for engineering handover',
+          'Created company wide accessibility standards and mentored designers, engineers and QA on best-practices'
+        ]"
+        :caseStudies="[
+          {
+          'img': 'VTS_case_study.png',
+          'url': '/vts',
+          'name': 'Case Study'
+        },
+        {
+          'img': 'tds_logo.png',
+          'url': 'https://terra.vts.com',
+          'name': 'Terra Design System'
+        }
+        ]"
+      />
 
-          <div class="subdued">
-            <details>
-              <summary style="margin: 8px 0px">Show more</summary>
-              <ul style="list-style: disc">
-                <li>
-                  Created a vision for a single platform to serve multiple
-                  personas and functions for the commercial real estate
-                  industry.
-                </li>
-                <li>
-                  Partnered with ﬁve product heads to champion a cross-product
-                  vision to transition disparate applications over to a uniﬁed
-                  platform
-                </li>
-                <li>
-                  Enabled VTS customers to have a uniﬁed seamless experience and
-                  achieve company’s long term strategic objectives by aligned
-                  the respective design squads to a single platform
-                </li>
-                <li>
-                  Managed the platform UX team and led the creation of a new
-                  enterprise design system
-                </li>
-                <li>
-                  Leveled up the design operation efﬁciency and UX maturity and
-                  reduced component redundancy by 6x
-                </li>
-                <li>
-                  Mentored and educated other designers on interaction patterns,
-                  design system foundations, accessibility design and design
-                  principles
-                </li>
-                <li>
-                  Enabled cross-pollination of ideas among 20+ designers across
-                  different squads to collaborate and contribute to a single
-                  repository of design patterns and components.
-                </li>
-                <li>
-                  Implemented a governance model to ensure quality and shared
-                  ownership
-                </li>
-                <li>
-                  Standardized the design language for the company, implemented
-                  scalable and efﬁcient design processes, removed the need to
-                  spec designs for engineering handover
-                </li>
-                <li>
-                  Created company wide accessibility standards and mentored
-                  designers, engineers and QA on best-practices
-                </li>
-              </ul>
-            </details>
-          </div>
-          <br />
-          <grid
-            class="middle"
-            col="2"
-            style="grid-template-columns: 100px auto; padding-bottom: 20px"
-          >
-            <c
-              style="
-                text-align: center;
-                align-items: center;
-                display: grid;
-                justify-content: center;
-                align-content: center;
-              "
-            >
-              <div style="margin-top: 10px" class="align-top">
-                <a class="align-top" href="/vts" target="_blank">
-                  <img
-                    style="height: 100px; width: auto; margin-right: 10px"
-                    src="~/assets/img/VTS_case_study.png"
-                  />
-                </a>
-              </div>
-              <p style="font-size: 16px; margin-top: 8px">
-                <a class="base-text" href="/vts">
-                  Case Study
-                  <span class="link-img" style="white-space: nowrap"></span>
-                </a>
-              </p>
-            </c>
-            <c style="margin-left: 40px">
-              <div style="margin-top: 10px" class="align-top">
-                <a
-                  class="align-top"
-                  href="https://terra.vts.com"
-                  target="_blank"
-                >
-                  <img
-                    style="
-                      height: 100px;
-                      width: auto;
-                      border-radius: 8px;
-                      margin-right: 10px;
-                    "
-                    src="~/assets/img/tds_logo.png"
-                  />
-                </a>
-              </div>
-              <p style="font-size: 16px; margin-top: 8px">
-                <a class="base-text" href="https://terra.vts.com">
-                  Terra Design system
-                  <span class="link-img" style="white-space: nowrap"></span>
-                </a>
-              </p>
-            </c>
-          </grid>
-        </c>
-      </grid>
-      <br />
-      <grid
-        class="middle"
-        col="2"
-        style="grid-template-columns: 100px auto; padding-bottom: 20px"
-      >
-        <c class="subdued" style="padding-top: 4px">2018 — 2021</c>
-        <c>
-          <p style="font-size: 18px; font-weight: 600">
-            Empowered 200+ designers to integrate into a new organization wide
-            design system
-          </p>
-          <p style="font-size: 16px">
-            VP, User Experience Design Lead at JP Morgan Chase
-          </p>
+      <WorkExperience
+        year="2018 - 2021"
+        title="Empowered 200+ designers to integrate into a new organization wide design system"
+        position="VP, User Experience Design Lead"
+        company="JPMorgan Chase"
+        location="New York"
+        :details="[
+          'Led the UX design and development of a new, enterprise-wide Manhattan Design System',
+          'Managed services, tools and workflows that automated the creation of new designpatterns, and reduced delivery time of specs to Engineering by 50%',
+          'Partnered with multiple verticals and sub-brands across the organization and rallied 200+ designers to contribute to and adopt the new design system into their products',
+          'Co-authored the foundational token system for the design system components and automated the discovery and distribution of the tokens to both design and dev platforms',
+          'Mentored various designers and engineers on assistive technologies and championed the WCAG standard in the organization. Facilitated negotiations between Engineering and Design to re-imagine solutions without compromising on accessibility',
 
-          <p class="subdued" style="font-size: 12px; padding-bottom: 4px">
-            New York
-          </p>
+        ]"
+        :caseStudies="[
+          {
+          'img': 'mds.png',
+        }
+        ]"
+      />
 
-          <div class="subdued">
-            <details>
-              <summary style="margin: 8px 0px">Show more</summary>
-              <ul style="list-style: disc">
-                <li>
-                  Led the UX design and development of a new, enterprise-wide
-                  Manhattan Design System
-                </li>
-                <li>
-                  Managed services, tools and workflows that automated the
-                  creation of new designpatterns, and reduced delivery time of
-                  specs to Engineering by 50%
-                </li>
-                <li>
-                  Partnered with multiple verticals and sub-brands across the
-                  organization and rallied 200+ designers to contribute to and
-                  adopt the new design system into their products
-                </li>
-                <li>
-                  Co-authored the foundational token system for the design
-                  system components and automated the discovery and distribution
-                  of the tokens to both design and dev platforms
-                </li>
-                <li>
-                  Mentored various designers and engineers on assistive
-                  technologies and championed the WCAG standard in the
-                  organization. Facilitated negotiations between Engineering and
-                  Design to re-imagine solutions without compromising on
-                  accessibility
-                </li>
-              </ul>
-            </details>
-          </div>
+      <WorkExperience
+        year="2014 — 2018"
+        title="Enabled enterprises to create custom communication platforms"
+        position="Senior UI/UX Designer and Engineer"
+        company="Vidyo"
+        location="Hackensack"
+        :details="[
+          'Partnered with high-proﬁle clients to implement and deploy Vidyo Connect2, the latest video-communication platform to their network, globally',
+          'Increased the efﬁciency of the front-end stack to increase the number of participants in a video conference by 400%',
+          'Led the design and development of UX for Vidyo Connect - a new platform for enterprise video conferencing',
+          'Designed the UX for Vidyo Connect that redeﬁned the company’s product strategy',
+          'Co-Created a new web UI framework and partnered with the SDK team to enhance the existing client application into a highly customizable communication platform and enabled clients to customize features to ﬁt individual needs',
+          'Big Wins:',
+          'Logged more than 3 Billion minutes of talk time and over 150 Million conference calls in just 2 years and became the largest private video conferencing platform in 2020',
+          '140% increase in calls duration, 180% increase in meetings and 280% increase in direct calls on the new platform, directly attributed to improvement in UX',
+          
+          
+          
+          
 
-          <p style="margin-top: 10px" class="align-top">
-            <img
-              style="
-                height: 100px;
-                width: auto;
-                border-radius: 8px;
-                margin-right: 10px;
-              "
-              src="~/assets/img/mds.png"
-            />
-          </p>
-        </c>
-      </grid>
-      <br />
-      <grid
-        class="middle"
-        col="2"
-        style="grid-template-columns: 100px auto; padding-bottom: 20px"
-      >
-        <c class="subdued" style="padding-top: 4px">2014 — 2018</c>
-        <c>
-          <p style="font-size: 18px; font-weight: 600">
-            Enabled enterprises to create custom communication platforms
-          </p>
-          <p style="font-size: 16px">
-            Senior UI/UX Designer and Engineer at Vidyo
-          </p>
-          <p style="font-size: 16px"></p>
-          <p class="subdued" style="font-size: 12px; padding-bottom: 4px">
-            Hackensack, NJ
-          </p>
+        ]"
+        :caseStudies="[
+          {
+          'img': 'vidyo.png',
+          'url': '/projects/vidyoconnectcasestudy',
+          'name': 'Vidyo Case Study'
+        }
+        ]"
+      />
 
-          <div class="subdued">
-            <details>
-              <summary style="margin: 8px 0px">Show more</summary>
-              <ul style="list-style: disc">
-                <li>
-                  Partnered with high-proﬁle clients to implement and deploy
-                  Vidyo Connect2, the latest video-communication platform to
-                  their network, globally
-                </li>
-                <li>
-                  Increased the efﬁciency of the front-end stack to increase the
-                  number of participants in a video conference by 400%
-                </li>
-                <li>
-                  Led the design and development of UX for Vidyo Connect - a new
-                  platform for enterprise video conferencing
-                </li>
-                <li>
-                  Designed the UX for Vidyo Connect that redeﬁned the company’s
-                  product strategy
-                </li>
-                <li>
-                  Co-Created a new web UI framework and partnered with the SDK
-                  team to enhance the existing client application into a highly
-                  customizable communication platform and enabled clients to
-                  customize features to ﬁt individual needs
-                </li>
-                <li>Big Wins:</li>
-                <li>
-                  Logged more than 3 Billion minutes of talk time and over 150
-                  Million conference calls in just 2 years and became the
-                  largest private video conferencing platform in 2020
-                </li>
-                <li>
-                  140% increase in calls duration, 180% increase in meetings and
-                  280% increase in direct calls on the new platform, directly
-                  attributed to improvement in UX
-                </li>
-              </ul>
-            </details>
-          </div>
-
-          <br />
-
-          <div style="margin-top: 10px" class="align-top">
-            <a
-              class="align-top"
-              href="/projects/vidyoconnectcasestudy"
-              target="_blank"
-            >
-              <img
-                style="
-                  height: 100px;
-                  width: auto;
-                  border-radius: 8px;
-                  margin-right: 10px;
-                "
-                src="~/assets/img/vidyo.png"
-              />
-            </a>
-          </div>
-          <p style="font-size: 16px; margin-top: 8px">
-            <a class="base-text" href="/projects/vidyoconnectcasestudy">
-              Vidyo Connect™️
-              <span class="link-img" style="white-space: nowrap"></span>
-            </a>
-          </p>
-        </c>
-      </grid>
-      <br />
-      <grid
-        class="middle"
-        col="2"
-        style="grid-template-columns: 100px auto; padding-bottom: 20px"
-      >
-        <c class="subdued" style="padding-top: 4px">2009 — 2013</c>
-        <c>
-          <p style="font-size: 18px; font-weight: 600">
-            Equipped clients to customize and create their own reports
-          </p>
-          <p style="font-size: 16px">Analyst Developer at Goldman Sachs</p>
-          <p style="font-size: 16px"></p>
-          <p class="subdued" style="font-size: 12px; padding-bottom: 4px">
-            Bangalore
-          </p>
-
-          <div class="subdued">
-            <details>
-              <summary style="margin: 8px 0px">Show more</summary>
-              <ul style="list-style: disc">
-                <li>
-                  Led the front-end development of the self-service custom
-                  reporting tool for derivative customers
-                </li>
-                <li>
-                  Led the development of Goldman Sachs web portal for reporting
-                  derivative securities and expanded the web portal development
-                  knowledge base from NYC to India and Southeast Asia ofﬁces
-                </li>
-                <li>
-                  Created a new entitlement model and reduced user interactions
-                  by a factor of 12. Developed a regression suite that can
-                  record and replay user actions automatically using selenium,
-                  cutting down the UI regression testing time by 80%
-                </li>
-              </ul>
-            </details>
-          </div>
-        </c>
-      </grid>
+      <WorkExperience
+        year="2009 — 2013"
+        title="Equipped clients to customize and create their own reports"
+        position="Associate Developer"
+        company="Goldman Sachs"
+        location="Bangalore"
+        :details="[
+          'Led the front-end development of the self-service custom reporting tool for derivative customers',
+          'Led the development of Goldman Sachs web portal for reporting derivative securities and expanded the web portal development knowledge base from NYC to India and Southeast Asia ofﬁces',
+          'Created a new entitlement model and reduced user interactions by a factor of 12. Developed a regression suite that can record and replay user actions automatically using selenium, cutting down the UI regression testing time by 80%',
+        ]"
+      />
 
       <h3>Education</h3>
       <br />
@@ -613,8 +384,12 @@
   </div>
 </template>
 <script>
+import WorkExperience from '~/components/WorkExperience';
 export default {
-  name: 'About',
+  name: 'Home',
+  components: {
+    WorkExperience
+  },
   head() {
     return {
       meta: [

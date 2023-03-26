@@ -2,7 +2,6 @@
 
 <template>
   <div>
-    <!-- <MainHeader ref="header" /> -->
     <!-- <VueScrollProgressBar height="2px" zIndex="1050" /> -->
     <NuxtPage />
     <MainFooter />
@@ -10,7 +9,6 @@
   </div>
 </template>
 <script>
-import MainHeader from '~/components/MainHeader';
 import MainFooter from '~/components/MainFooter';
 import BackToTop from '~/components/BackToTop.vue';
 // import VueScrollProgressBar from '~/components/VueScrollProgressBar.vue';
@@ -18,30 +16,9 @@ import BackToTop from '~/components/BackToTop.vue';
 export default {
   name: 'App',
   components: {
-    MainHeader,
     MainFooter,
     // VueScrollProgressBar,
     BackToTop
-  },
-  mounted() {
-    // this.$store.commit(
-    //   'setIsDark',
-    //   window.matchMedia('(prefers-color-scheme: dark)').matches
-    // );
-  },
-  methods: {
-    handleScroll() {
-      if (this.$refs.header) {
-        // if (window.scrollY > 2) {
-        //   this.$refs.header.$el.setAttribute(
-        //     'style',
-        //     'box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);'
-        //   );
-        // } else {
-        //   this.$refs.header.$el.setAttribute('style', '');
-        // }
-      }
-    }
   },
   head() {
     return {

@@ -1,5 +1,5 @@
 <template>
-  <header class="pt-header">
+  <header v-scroll="handleScroll" ref="header" class="pt-header">
     <div id="pt-logo">
       <nuxt-link to="/">
         <span class="main-logo" alt="Pratyush Tewari Logo"></span>
@@ -22,6 +22,16 @@ export default {
         ? require('/assets/img/pratyush_logo_ondark.svg')
         : require('/assets/img/pratyush_logo_onlight.svg');
       return url;
+    },
+    handleScroll() {
+      if (window.scrollY > 2) {
+        this.$el.setAttribute(
+          'style',
+          'box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);'
+        );
+      } else {
+        this.$el.setAttribute('style', '');
+      }
     }
   }
 };
