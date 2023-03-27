@@ -133,7 +133,7 @@
           'name': 'Case Study'
         },
         {
-          'img': 'tds_logo.png',
+          'img': 'TDS_logo.png',
           'url': 'https://terra.vts.com',
           'name': 'Terra Design System'
         }

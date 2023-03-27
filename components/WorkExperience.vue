@@ -95,34 +95,10 @@ export default {
 
   methods: {
     getImageUrl(srcurl) {
-      console.log('>>>>>');
-      console.log(import.meta.url);
-      console.log('<<<<<>>>>>>>>>>');
+      const imageUrl = new URL(`../assets/img/${srcurl}`, import.meta.url).href
+      return imageUrl;
 
-      // This path must be correct for your file
-      // return require(srcurl);
-      // return srcurl;
-      return `_nuxt/assets/img/${srcurl}`;
-      // return require(new URL(`../../assets/img/${srcurl}`, import.meta.url));
     }
   }
-
-  // data: function() {
-  //   return {
-  //     href: `/projects/${this.name.toLowerCase().replace(/\W+/g, "")}`,
-  //     buttonClass: `project-view-button ${this.name.toLowerCase().replace(/\W+/g, "")}`,
-  //     imgclass: `pt-project-pic ${this.name.toLowerCase().replace(/\W+/g, "")}`
-  //   };
-  // }
-
-  // data: function () {
-  //   return {
-  //     href: `/projects/${this.name.toLowerCase().replace(/\W+/g, '')}`,
-  //     buttonClass: `project-view-button ${this.name
-  //       .toLowerCase()
-  //       .replace(/\W+/g, '')}`,
-  //     imgclass: `pt-project-pic ${this.name.toLowerCase().replace(/\W+/g, '')}`
-  //   };
-  // }
 };
 </script>
