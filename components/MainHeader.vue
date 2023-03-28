@@ -19,9 +19,13 @@ export default {
   methods: {
     getImgUrl() {
       const url = this.$store.state.isDark
-        ? require('/assets/img/pratyush_logo_ondark.svg')
-        : require('/assets/img/pratyush_logo_onlight.svg');
+        ? this.getImageUrl('/assets/img/pratyush_logo_ondark.svg')
+        : this.getImageUrl('/assets/img/pratyush_logo_onlight.svg');
       return url;
+    },
+    getImageUrl(srcurl) {
+      const imageUrl = new URL(srcurl, import.meta.url).href
+      return imageUrl;
     },
     handleScroll() {
       if (window.scrollY > 2) {

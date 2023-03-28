@@ -2,14 +2,6 @@
 # yarn lockfile v1
 
 
-"@aacassandra/vue3-progressbar@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@aacassandra/vue3-progressbar/-/vue3-progressbar-1.0.3.tgz#12df4a135968a43af2d2a5753174587e5cc5cb95"
-  integrity sha512-e4SlgYwXiNABJbHYOChs3aSiCyR+1D6WAjWR1zo3vCs/9k6Vjj2GIPXWNJA/YP4RhlQS4eSC3RtCPC95CfAEbw==
-  dependencies:
-    core-js "^3.6.5"
-    vue "^3.0.0"
-
 "@ampproject/remapping@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@ampproject/remapping/-/remapping-2.2.0.tgz#56c133824780de3174aed5ab6834f3026790154d"
@@ -1666,7 +1658,7 @@ cookie-es@^0.5.0:
   resolved "https://registry.yarnpkg.com/cookie-es/-/cookie-es-0.5.0.tgz#a6ad89923e68c542fc9e760b07aefa5ab020d719"
   integrity sha512-RyZrFi6PNpBFbIaQjXDlFIhFVqV42QeKSZX1yQIl6ihImq6vcHNGMtqQ/QzY3RMPuYSkvsRwtnt5M9NeYxKt0g==
 
-core-js@^3.22.3, core-js@^3.6.5:
+core-js@^3.22.3:
   version "3.29.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.29.1.tgz#40ff3b41588b091aaed19ca1aa5cb111803fa9a6"
   integrity sha512-+jwgnhg6cQxKYIIjGtAHq2nwUOolo9eoFZ4sHfUH09BLXBgxnH4gA0zEd+t+BO2cNB8idaBtZFcFTRjQJRJmAw==
@@ -5286,7 +5278,7 @@ vue3-carousel@^0.2.14:
   resolved "https://registry.yarnpkg.com/vue3-carousel/-/vue3-carousel-0.2.14.tgz#8b7e6b84de9784c3f49b176515a2ff0fe4d5ed3a"
   integrity sha512-QLFdD0rOe9vZwlbNwTt0DkC8wjhYnAt4Okxed4tfYRlbegjGFQqu1u9jwwrcBLIaWwE3xTrFREFfSfVoOAvqlw==
 
-vue@^3.0.0, vue@^3.2.47:
+vue@^3.2.47:
   version "3.2.47"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.47.tgz#3eb736cbc606fc87038dbba6a154707c8a34cff0"
   integrity sha512-60188y/9Dc9WVrAZeUVSDxRQOZ+z+y5nO2ts9jWXSTkMvayiWxCWOWtBQoYjLeccfXkiiPZWAHcV+WTPhkqJHQ==

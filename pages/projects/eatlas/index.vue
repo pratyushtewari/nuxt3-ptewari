@@ -487,14 +487,21 @@ export default {
     MainHeader,
     Carousel
   },
+  methods: {
+    getImageUrl(srcurl) {
+      return `_nuxt/${srcurl}`;
+      // const imageUrl = new URL(`../assets/img/${srcurl}`, import.meta.url).href
+      // return imageUrl;
+    }
+  },
   data: function () {
     return {
-      affiliny00: require('/assets/img/projects/eatlas/img/affiliny00.jpg'),
-      affiliny0: require('/assets/img/projects/eatlas/img/affiliny0.jpg'),
-      app0: require('/assets/img/projects/eatlas/img/app0.png'),
-      app1: require('/assets/img/projects/eatlas/img/app1.png'),
-      symbol0: require('/assets/img/projects/eatlas/img/symbol0.png'),
-      symbol1: require('/assets/img/projects/eatlas/img/symbol1.png'),
+      affiliny00: this.getImageUrl('/assets/img/projects/eatlas/img/affiliny00.jpg'),
+      affiliny0: this.getImageUrl('/assets/img/projects/eatlas/img/affiliny0.jpg'),
+      app0: this.getImageUrl('/assets/img/projects/eatlas/img/app0.png'),
+      app1: this.getImageUrl('/assets/img/projects/eatlas/img/app1.png'),
+      symbol0: this.getImageUrl('/assets/img/projects/eatlas/img/symbol0.png'),
+      symbol1: this.getImageUrl('/assets/img/projects/eatlas/img/symbol1.png'),
       quotes: [
         '<strong>Hmm ...</strong> ^800 what shall I eat tonight?',
         '<strong>Hey!</strong> ^800 what do you-all want for lunch?',
@@ -524,10 +531,10 @@ export default {
         sources: [
           {
             type: 'video/mp4',
-            src: require('/assets/img/projects/eatlas/video/eatlas-intro.mp4')
+            // src: this.getImageUrl('/assets/img/projects/eatlas/video/eatlas-intro.mp4')
           }
         ],
-        poster: require('/assets/img/projects/eatlas/img/eatlas-home.png')
+        // poster: this.getImageUrl('/assets/img/projects/eatlas/img/eatlas-home.png')
       },
       playerOptions2: {
         // videojs options
@@ -541,10 +548,10 @@ export default {
         sources: [
           {
             type: 'video/mp4',
-            src: require('/assets/img/projects/eatlas/video/eatlas-rotation-home.mp4')
+            // src:  this.getImageUrl('/assets/img/projects/eatlas/video/eatlas-rotation-home.mp4')
           }
         ],
-        poster: require('/assets/img/projects/eatlas/img/eatlas-home.png')
+        // poster:  this.getImageUrl('/assets/img/projects/eatlas/img/eatlas-home.png')
       }
     };
   }

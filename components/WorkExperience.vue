@@ -43,16 +43,13 @@
             align-content: center;
           "
         >
+          <!-- If there is a url then render the url -->
           <a
             v-if="caseStudy.url"
             class="big-buttons base-text"
             :href="caseStudy.url"
           >
-            <div style="margin-top: 10px">
-              <!-- :src="require(`~/assets/img/` + caseStudy.imgLocation)" -->
-              <!-- :src="require(`~/assets/img/` + `tds_logo.png`)" -->
-              <!-- :src="require('~/assets/img/VTS_case_study.png')" -->
-              
+            <div style="margin-top: 10px">              
               <img
               style="height: 100px; width: auto; margin-right: 10px"
               :src="getImageUrl(caseStudy.img)"
@@ -64,6 +61,7 @@
               <span class="link-img" style="white-space: nowrap"></span>
             </p>
           </a>
+          <!-- Else only render the image -->
           <div v-else class="base-text">
             <div style="margin-top: 10px">
               <img
@@ -95,9 +93,9 @@ export default {
 
   methods: {
     getImageUrl(srcurl) {
-      const imageUrl = new URL(`../assets/img/${srcurl}`, import.meta.url).href
-      return imageUrl;
-
+      return `_nuxt/assets/img/${srcurl}`;
+      // const imageUrl = new URL(`../assets/img/${srcurl}`, import.meta.url).href
+      // return imageUrl;
     }
   }
 };

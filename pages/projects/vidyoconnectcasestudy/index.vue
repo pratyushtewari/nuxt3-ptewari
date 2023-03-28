@@ -294,7 +294,7 @@
       <br />
       <h4>
         What do people want in
-        <strike>video</strike>
+        TODO <!-- <strike>video</strike> -->
         unified collaboration solution?
       </h4>
 
@@ -551,6 +551,13 @@ export default {
       ]
     };
   },
+  methods: {
+    getImageUrl(srcurl) {
+      return `_nuxt/${srcurl}`;
+      // const imageUrl = new URL(`../assets/img/${srcurl}`, import.meta.url).href
+      // return imageUrl;
+    }
+  },
   data: function () {
     return {
       playerOptions1: {
@@ -562,7 +569,7 @@ export default {
         sources: [
           {
             type: 'video/mp4',
-            src: require('@/pages/projects/vidyoconnectcasestudy/video/1.mp4')
+            src: this.getImageUrl('/pages/projects/vidyoconnectcasestudy/video/1.mp4')
           }
         ]
         // ,
@@ -577,7 +584,7 @@ export default {
         sources: [
           {
             type: 'video/mp4',
-            src: require('@/pages/projects/vidyoconnectcasestudy/video/2.mp4')
+            src: this.getImageUrl('/pages/projects/vidyoconnectcasestudy/video/2.mp4')
           }
         ]
         // ,
@@ -592,7 +599,7 @@ export default {
         sources: [
           {
             type: 'video/mp4',
-            src: require('@/pages/projects/vidyoconnectcasestudy/video/3.mp4')
+            src: this.getImageUrl('/pages/projects/vidyoconnectcasestudy/video/3.mp4')
           }
         ]
         // ,
@@ -607,10 +614,10 @@ export default {
         sources: [
           {
             type: 'video/mp4',
-            src: require('@/pages/projects/vidyoconnectcasestudy/video/4.mp4')
+            src: this.getImageUrl('/pages/projects/vidyoconnectcasestudy/video/4.mp4')
           }
         ],
-        poster: require('@/pages/projects/vidyoconnectcasestudy/img/posterneo.png')
+        poster: this.getImageUrl('/pages/projects/vidyoconnectcasestudy/img/posterneo.png')
       }
     };
   },

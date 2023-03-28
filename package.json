@@ -16,7 +16,6 @@
     "tailwindcss": "^3.2.7"
   },
   "dependencies": {
-    "@aacassandra/vue3-progressbar": "^1.0.3",
     "prettier": "^2.8.7",
     "sass": "^1.60.0",
     "sass-loader": "^13.2.1",
