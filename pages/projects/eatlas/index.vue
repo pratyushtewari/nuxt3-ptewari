@@ -19,14 +19,9 @@
           <c class="c3" span="1">
             <p>Eatlas helps you discover new food, cultures, and countries.</p>
             <div class="quote">
-              <vue-typed-js
-                :loop="true"
-                :type-speed="60"
-                :back-speed="10"
-                :strings="quotes"
-              >
+              <Typed :options="typedOptions">
                 <span class="typing"></span>
-              </vue-typed-js>
+              </Typed>
             </div>
             <p>
               Wondering what to eat? Where does a dish come from? What to eat
@@ -427,14 +422,106 @@
     </div>
   </div>
 </template>
-
-<script>
+<script lang="ts">
 import VideoPlayer from '~/components/VideoPlayer.vue';
 import TwentyTwenty from '~/components/TwentyTwenty.vue';
-import MainHeader from '~/components/MainHeader';
-import { Carousel } from 'vue3-carousel'
+import MainHeader from '~/components/MainHeader.vue';
+import { Carousel } from 'vue3-carousel';
+import { Typed } from '@duskmoon/vue3-typed-js';
+import type { TypedOptions } from '@duskmoon/vue3-typed-js';
+
 export default {
   name: 'Eatlas',
+  components: {
+    VideoPlayer,
+    TwentyTwenty,
+    MainHeader,
+    Carousel,
+    Typed
+  },
+
+  methods: {
+    getImageUrl(srcurl: string) {
+      return `_nuxt/${srcurl}`;
+      // const imageUrl = new URL(`../assets/img/${srcurl}`, import.meta.url).href
+      // return imageUrl;
+    },
+    getTypedOptions() {
+      const typedOptions: TypedOptions = {
+        strings: [
+          '<strong>Hmm ...</strong> ^800 what shall I eat tonight?',
+          '<strong>Hey!</strong> ^800 what do you-all want for lunch?',
+          '<strong>DUDE!</strong> ^800 just order something.',
+          "<strong>Argh!</strong> ^800 why's it taking so long to order?",
+          'Where can I buy my ethnic spices?',
+          'What is a ^500 <i>golgappa</i>?',
+          'What is a ^500 <i>bucatini</i>?',
+          'What is a ^500 <i>jambalaya</i>?',
+          'What is a ^500 <i>jícama</i>?',
+          'What is a ^500 <i>remoulade</i>?',
+          'What do Mongolians eat for breakfast?',
+          'How do you make soy sauce?',
+          'I donno what to eat tonight?',
+          'I want something new.',
+          "I don't like to try new cuisines"
+        ],
+        loop: true,
+        typeSpeed: 50,
+        backSpeed: 10
+      };
+      return typedOptions;
+    }
+  },
+
+  data: function () {
+    return {
+      affiliny00: this.getImageUrl(
+        '/assets/img/projects/eatlas/img/affiliny00.jpg'
+      ),
+      affiliny0: this.getImageUrl(
+        '/assets/img/projects/eatlas/img/affiliny0.jpg'
+      ),
+      app0: this.getImageUrl('/assets/img/projects/eatlas/img/app0.png'),
+      app1: this.getImageUrl('/assets/img/projects/eatlas/img/app1.png'),
+      symbol0: this.getImageUrl('/assets/img/projects/eatlas/img/symbol0.png'),
+      symbol1: this.getImageUrl('/assets/img/projects/eatlas/img/symbol1.png'),
+      typedOptions: this.getTypedOptions(),
+      playerOptions: {
+        // videojs options
+        muted: true,
+        loop: 'loop',
+        controls: false,
+        preload: 'auto',
+        autoplay: 'muted',
+        width: 212,
+        language: 'en',
+        sources: [
+          {
+            type: 'video/mp4'
+            // src: this.getImageUrl('/assets/img/projects/eatlas/video/eatlas-intro.mp4')
+          }
+        ]
+        // poster: this.getImageUrl('/assets/img/projects/eatlas/img/eatlas-home.png')
+      },
+      playerOptions2: {
+        // videojs options
+        muted: true,
+        loop: 'loop',
+        controls: false,
+        preload: 'auto',
+        autoplay: 'muted',
+        width: 212,
+        language: 'en',
+        sources: [
+          {
+            type: 'video/mp4'
+            // src:  this.getImageUrl('/assets/img/projects/eatlas/video/eatlas-rotation-home.mp4')
+          }
+        ]
+        // poster:  this.getImageUrl('/assets/img/projects/eatlas/img/eatlas-home.png')
+      }
+    };
+  },
   head() {
     return {
       title:
@@ -479,80 +566,6 @@ export default {
           content: 'https://i.imgur.com/CkiAt6c.png'
         }
       ]
-    };
-  },
-  components: {
-    VideoPlayer,
-    TwentyTwenty,
-    MainHeader,
-    Carousel
-  },
-  methods: {
-    getImageUrl(srcurl) {
-      return `_nuxt/${srcurl}`;
-      // const imageUrl = new URL(`../assets/img/${srcurl}`, import.meta.url).href
-      // return imageUrl;
-    }
-  },
-  data: function () {
-    return {
-      affiliny00: this.getImageUrl('/assets/img/projects/eatlas/img/affiliny00.jpg'),
-      affiliny0: this.getImageUrl('/assets/img/projects/eatlas/img/affiliny0.jpg'),
-      app0: this.getImageUrl('/assets/img/projects/eatlas/img/app0.png'),
-      app1: this.getImageUrl('/assets/img/projects/eatlas/img/app1.png'),
-      symbol0: this.getImageUrl('/assets/img/projects/eatlas/img/symbol0.png'),
-      symbol1: this.getImageUrl('/assets/img/projects/eatlas/img/symbol1.png'),
-      quotes: [
-        '<strong>Hmm ...</strong> ^800 what shall I eat tonight?',
-        '<strong>Hey!</strong> ^800 what do you-all want for lunch?',
-        '<strong>DUDE!</strong> ^800 just order something.',
-        "<strong>Argh!</strong> ^800 why's it taking so long to order?",
-        'Where can I buy my ethnic spices?',
-        'What is a ^500 <i>golgappa</i>?',
-        'What is a ^500 <i>bucatini</i>?',
-        'What is a ^500 <i>jambalaya</i>?',
-        'What is a ^500 <i>jícama</i>?',
-        'What is a ^500 <i>remoulade</i>?',
-        'What do Mongolians eat for breakfast?',
-        'How do you make soy sauce?',
-        'I donno what to eat tonight?',
-        'I want something new.',
-        "I don't like to try new cuisines"
-      ],
-      playerOptions: {
-        // videojs options
-        muted: true,
-        loop: 'loop',
-        controls: false,
-        preload: 'auto',
-        autoplay: 'muted',
-        width: 212,
-        language: 'en',
-        sources: [
-          {
-            type: 'video/mp4',
-            // src: this.getImageUrl('/assets/img/projects/eatlas/video/eatlas-intro.mp4')
-          }
-        ],
-        // poster: this.getImageUrl('/assets/img/projects/eatlas/img/eatlas-home.png')
-      },
-      playerOptions2: {
-        // videojs options
-        muted: true,
-        loop: 'loop',
-        controls: false,
-        preload: 'auto',
-        autoplay: 'muted',
-        width: 212,
-        language: 'en',
-        sources: [
-          {
-            type: 'video/mp4',
-            // src:  this.getImageUrl('/assets/img/projects/eatlas/video/eatlas-rotation-home.mp4')
-          }
-        ],
-        // poster:  this.getImageUrl('/assets/img/projects/eatlas/img/eatlas-home.png')
-      }
     };
   }
 };
