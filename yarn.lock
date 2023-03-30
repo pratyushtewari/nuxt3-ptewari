@@ -325,9 +325,9 @@
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
 "@duskmoon/vue3-typed-js@^0.0.4":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@duskmoon/vue3-typed-js/-/vue3-typed-js-0.0.3.tgz#c5dfffc2e701c6cb8ff40ff32f8207005dce7d2e"
-  integrity sha512-68Weiq2gJEU6z+PoP1L/lSTwjrnUIokU2scBlCSfbjjzYqiIp8UwIp+sTXqac29C2rbVSpUsFdbprxYMtK5L7g==
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@duskmoon/vue3-typed-js/-/vue3-typed-js-0.0.4.tgz#5d4152e09363ef41a857e2d30c3a82fa3138b094"
+  integrity sha512-E2oD+xJ1D54IWVeXc4MiaFm0oDxscFq74t/V5CCqPJx17rVjXFqaKA0oR9BpmSg5IeWQIMqm0NPGVJSbZ10gSw==
   dependencies:
     typed.js "^2.0.12"
     vue "3.2.47"
