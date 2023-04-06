@@ -8,7 +8,7 @@
             <h1>
               <img
                 class="pt-project-logo"
-                src="@/assets/img/projects/eatlas/img/eatlas_logo.svg"
+                src="~assets/img/projects/eatlas/img/eatlas_logo.svg"
               />
               Eatlas
             </h1>
@@ -49,17 +49,17 @@
       <h2 class="main center">Based on just 3 simple gestures</h2>
       <div class="steps3">
         <span>
-          <img class="phone" src="@/assets/img/projects/eatlas/img/step1.png" />
+          <img class="phone" src="~/assets/img/projects/eatlas/img/step1.png" />
           <div class="finger one"></div>
           <p>Spin</p>
         </span>
         <span>
-          <img class="phone" src="@/assets/img/projects/eatlas/img/step2.png" />
+          <img class="phone" src="~/assets/img/projects/eatlas/img/step2.png" />
           <div class="finger two"></div>
           <p>Decide</p>
         </span>
         <span>
-          <img class="phone" src="@/assets/img/projects/eatlas/img/step3.png" />
+          <img class="phone" src="~/assets/img/projects/eatlas/img/step3.png" />
           <div class="finger three"></div>
           <p>Explore</p>
         </span>
@@ -106,7 +106,7 @@
           <p>
             <img
               style="width: 100%"
-              src="@/assets/img/projects/eatlas/img/thinking_about_food.png"
+              src="~/assets/img/projects/eatlas/img/thinking_about_food.png"
             />
           </p>
           <p>Thought process of my target audience when asked about food</p>
@@ -116,7 +116,7 @@
             <img
               class="center max-500"
               style="width: 100%"
-              src="@/assets/img/projects/eatlas/img/flow-chart-food.png"
+              src="~/assets/img/projects/eatlas/img/flow-chart-food.png"
             />
           </p>
           <div class="center small">
@@ -150,7 +150,7 @@
         <span>
           <img
             class="phone"
-            src="@/assets/img/projects/eatlas/img/pickers.png"
+            src="~/assets/img/projects/eatlas/img/pickers.png"
           />
           <div class="finger one"></div>
           <p>Pickers</p>
@@ -158,7 +158,7 @@
         <span>
           <img
             class="phone"
-            src="@/assets/img/projects/eatlas/img/recipers.png"
+            src="~/assets/img/projects/eatlas/img/recipers.png"
           />
           <div class="finger two"></div>
           <p>Recipers</p>
@@ -166,7 +166,7 @@
         <span>
           <img
             class="phone"
-            src="@/assets/img/projects/eatlas/img/deciders.png"
+            src="~/assets/img/projects/eatlas/img/deciders.png"
           />
           <div class="finger three"></div>
           <p>Deciders</p>
@@ -354,13 +354,13 @@
       <br />
       <br />
       <Carousel :navigation-enabled="true" :per-page="1" class="width700">
-        <slide><img src="@/assets/img/projects/eatlas/img/ds1.png" /></slide>
-        <slide><img src="@/assets/img/projects/eatlas/img/ds2.png" /></slide>
-        <slide><img src="@/assets/img/projects/eatlas/img/ds3.png" /></slide>
-        <slide><img src="@/assets/img/projects/eatlas/img/ds4.png" /></slide>
-        <slide><img src="@/assets/img/projects/eatlas/img/ds5.png" /></slide>
-        <slide><img src="@/assets/img/projects/eatlas/img/ds6.png" /></slide>
-        <slide><img src="@/assets/img/projects/eatlas/img/ds7.png" /></slide>
+        <slide><img src="~/assets/img/projects/eatlas/img/ds1.png" /></slide>
+        <slide><img src="~/assets/img/projects/eatlas/img/ds2.png" /></slide>
+        <slide><img src="~/assets/img/projects/eatlas/img/ds3.png" /></slide>
+        <slide><img src="~/assets/img/projects/eatlas/img/ds4.png" /></slide>
+        <slide><img src="~/assets/img/projects/eatlas/img/ds5.png" /></slide>
+        <slide><img src="~/assets/img/projects/eatlas/img/ds6.png" /></slide>
+        <slide><img src="~/assets/img/projects/eatlas/img/ds7.png" /></slide>
       </Carousel>
 
       <br />
@@ -393,13 +393,13 @@
 
       <Carousel :navigation-enabled="true" :per-page="1" class="width400">
         <slide>
-          <img src="@/assets/img/projects/eatlas/img/component1.png" />
+          <img src="~/assets/img/projects/eatlas/img/component1.png" />
         </slide>
         <slide>
-          <img src="@/assets/img/projects/eatlas/img/component2.png" />
+          <img src="~/assets/img/projects/eatlas/img/component2.png" />
         </slide>
         <slide>
-          <img src="@/assets/img/projects/eatlas/img/component3.png" />
+          <img src="~/assets/img/projects/eatlas/img/component3.png" />
         </slide>
       </Carousel>
 
@@ -410,13 +410,13 @@
 
       <Carousel :navigation-enabled="true" :per-page="1" class="width400">
         <slide>
-          <img src="@/assets/img/projects/eatlas/img/override1.png" />
+          <img src="~/assets/img/projects/eatlas/img/override1.png" />
         </slide>
         <slide>
-          <img src="@/assets/img/projects/eatlas/img/override2.png" />
+          <img src="~/assets/img/projects/eatlas/img/override2.png" />
         </slide>
         <slide>
-          <img src="@/assets/img/projects/eatlas/img/override3.png" />
+          <img src="~/assets/img/projects/eatlas/img/override3.png" />
         </slide>
       </Carousel>
     </div>
@@ -442,11 +442,10 @@ export default {
 
   methods: {
     getImageUrl(srcurl: string) {
-      return `_nuxt/${srcurl}`;
-      // const imageUrl = new URL(`../assets/img/${srcurl}`, import.meta.url).href
-      // return imageUrl;
+      const imageUrl = new URL(`~/assets/img/${srcurl}`, import.meta.url).href
+      return imageUrl;
     },
-    getTypedOptions() {
+    getTypedOptions() :TypedOptions  {
       const typedOptions: TypedOptions = {
         strings: [
           '<strong>Hmm ...</strong> ^800 what shall I eat tonight?',
@@ -472,19 +471,18 @@ export default {
       return typedOptions;
     }
   },
-
   data: function () {
     return {
-      affiliny00: this.getImageUrl(
-        '/assets/img/projects/eatlas/img/affiliny00.jpg'
+      affiliny00: this.getAsset(
+        '~/assets/img/projects/eatlas/img/affiliny00.jpg'
       ),
       affiliny0: this.getImageUrl(
-        '/assets/img/projects/eatlas/img/affiliny0.jpg'
+        'projects/eatlas/img/affiliny0.jpg'
       ),
-      app0: this.getImageUrl('/assets/img/projects/eatlas/img/app0.png'),
-      app1: this.getImageUrl('/assets/img/projects/eatlas/img/app1.png'),
-      symbol0: this.getImageUrl('/assets/img/projects/eatlas/img/symbol0.png'),
-      symbol1: this.getImageUrl('/assets/img/projects/eatlas/img/symbol1.png'),
+      app0: this.getImageUrl('projects/eatlas/img/app0.png'),
+      app1: this.getImageUrl('projects/eatlas/img/app1.png'),
+      symbol0: this.getImageUrl('projects/eatlas/img/symbol0.png'),
+      symbol1: this.getImageUrl('projects/eatlas/img/symbol1.png'),
       typedOptions: this.getTypedOptions(),
       playerOptions: {
         // videojs options
@@ -497,11 +495,11 @@ export default {
         language: 'en',
         sources: [
           {
-            type: 'video/mp4'
-            // src: this.getImageUrl('/assets/img/projects/eatlas/video/eatlas-intro.mp4')
+            type: 'video/mp4',            
+            src: this.getImageUrl('projects/eatlas/video/eatlas-intro.mp4')
           }
-        ]
-        // poster: this.getImageUrl('/assets/img/projects/eatlas/img/eatlas-home.png')
+        ],
+        poster: this.getImageUrl('projects/eatlas/img/eatlas-home.png')
       },
       playerOptions2: {
         // videojs options
@@ -515,10 +513,10 @@ export default {
         sources: [
           {
             type: 'video/mp4'
-            // src:  this.getImageUrl('/assets/img/projects/eatlas/video/eatlas-rotation-home.mp4')
+            // src:  this.getImageUrl('projects/eatlas/video/eatlas-rotation-home.mp4')
           }
         ]
-        // poster:  this.getImageUrl('/assets/img/projects/eatlas/img/eatlas-home.png')
+        // poster:  this.getImageUrl('projects/eatlas/img/eatlas-home.png')
       }
     };
   },

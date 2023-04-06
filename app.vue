@@ -8,12 +8,13 @@
     <BackToTop />
   </div>
 </template>
-<script>
-import MainFooter from '~/components/MainFooter';
-import BackToTop from '~/components/BackToTop.vue';
+<script lang="ts">
+import {defineComponent} from 'vue';
+import MainFooter from './components/MainFooter.vue';
+import BackToTop from './components/BackToTop.vue';
 // import VueScrollProgressBar from '~/components/VueScrollProgressBar.vue';
 
-export default {
+export default defineComponent({
   name: 'App',
   components: {
     MainFooter,
@@ -82,5 +83,5 @@ export default {
       ]
     };
   }
-};
+});
 </script>

@@ -9,18 +9,18 @@ export default defineNuxtConfig({
 
   css: [
     'video.js/dist/video-js.css', 
-    '@/assets/styles/tailwind.css',
+    '~/assets/styles/tailwind.css',
     'vue3-carousel/dist/carousel.css',
     // '@/assets/styles/variables.scss',
-    '@/assets/styles/grid.css',
-    '@/assets/styles/_reset.scss',
-    '@/assets/styles/main.scss',
+    '~/assets/styles/grid.css',
+    '~/assets/styles/_reset.scss',
+    '~/assets/styles/main.scss',
   ],
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "@/assets/styles/variables.scss";',
+          additionalData: '@import "~/assets/styles/variables.scss";',
         },
       },
     },
@@ -38,7 +38,7 @@ export default defineNuxtConfig({
   //   payloadExtraction: false
   // },
   plugins: [
-    { src: '@/plugins/scroll.ts'},
+    { src: '~/plugins/scroll.ts'},
     // { src: '@/plugins/vue-typed-js.js' },
     // { src: '@/plugins/vue-carousel.js', ssr: false },
     // { src: '@/plugins/ga.js', mode: 'client' }
